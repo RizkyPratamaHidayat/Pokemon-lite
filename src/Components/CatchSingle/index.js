@@ -55,7 +55,6 @@ const CatchPokemonSingle = (props) => {
         let arr = addArr.concat(data)
         setAddArr(arr);
         await localStorage.setItem('arr', JSON.stringify(addArr));
-        history.push("/myPokemonList")
     }
 
     const handleback = () =>{
@@ -70,7 +69,7 @@ const CatchPokemonSingle = (props) => {
             <div className="catch-container">
                       <img src={PokeBall} className="pokeBall-catch" width="200" height="200" alt="pokeBall" />
                 <h1 className="succes-label">Success</h1>
-                <button className="btn-take" onClick={handle}>Take Your Pokemon</button>
+                <a href="/myPokemonList" className="btn-take" onClick={handle}>Take Your Pokemon</a>
             </div>
 
         )
